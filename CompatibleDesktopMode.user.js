@@ -4,6 +4,7 @@
 // @description  Compatible Desktop Mode
 // @author       Foxok
 // @include      www.aliyundrive.com
+// @include      pan.baidu.com
 // @updateURL     https://raw.githubusercontent.com/foxokbrowser/scripts/main/CompatibleDesktopMode.user.js
 // @downloadURL   https://raw.githubusercontent.com/foxokbrowser/scripts/main/CompatibleDesktopMode.user.js
 // @supportURL    https://github.com/foxokbrowser/scripts

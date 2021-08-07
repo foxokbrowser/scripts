@@ -1,7 +1,8 @@
 # scripts
+Extension For Foxok
 
 Foxok油猴/JS扩展：
-Extension For Foxok
+
 
 QQ群：1055506433
 

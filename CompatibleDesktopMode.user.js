@@ -4,9 +4,9 @@
 // @description  Compatible Desktop Mode
 // @author       Foxok
 // @include      www.aliyundrive.com
-// updateURL     https://raw.githubusercontent.com/foxokbrowser/scripts/main/CompatibleDesktopMode.user.js
-// downloadURL   https://raw.githubusercontent.com/foxokbrowser/scripts/main/CompatibleDesktopMode.user.js
-// supportURL    https://github.com/foxokbrowser/scripts/blob/main/CompatibleDesktopMode.user.js
+// @updateURL     https://raw.githubusercontent.com/foxokbrowser/scripts/main/CompatibleDesktopMode.user.js
+// @downloadURL   https://raw.githubusercontent.com/foxokbrowser/scripts/main/CompatibleDesktopMode.user.js
+// @supportURL    https://github.com/foxokbrowser/scripts/blob/main/CompatibleDesktopMode.user.js
 // @run-at       document-start
 // ==/UserScript==
 

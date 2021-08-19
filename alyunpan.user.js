@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         阿里云盘脚本V5.8【修复无法执行】
+// @name         阿里云盘脚本V5.9【兼容阿里新版本】
 // @namespace    http://bbs.tampermonkey.net.cn/
-// @version      66.86
+// @version      66.90
 // @description  【bbs.tampermonkey.net.cn】李恒道
 // @author       【bbs.tampermonkey.net.cn】李恒道
 // @source       https://script.tampermonkey.net.cn/57.user.js
@@ -836,7 +836,7 @@ if (unsafeWindow.location.href.indexOf('aliyundrive.com/drive') != -1) {
                     accesstoken = JSON.parse(xhr.response).access_token
 
                 }
-                if (xhr.responseURL === "https://api.aliyundrive.com/v2/file/list") {
+                if (xhr.responseURL === "https://api.aliyundrive.com/v2/file/list"||xhr.responseURL === 'https://api.aliyundrive.com/adrive/v3/file/list') {
                     let quit = false;
                     document.querySelectorAll('.ant-modal-header').forEach((item) => {
                         if (item.innerText.indexOf('移动') !== -1) {

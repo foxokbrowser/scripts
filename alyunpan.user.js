@@ -664,16 +664,23 @@ function StartListner() {
 
                 }
                 let GenerateFileIn = document.createElement('div')
-
                 GenerateFileIn.innerHTML = '<div class="button-wrapper--1UkG6" data-type="primary" style="margin-left: 5px;"margin-right:5px;">多文件提取</div>'
                 GenerateFileIn.onclick = function () {
                     MulReadialogCreate()
 
-
+                }
+                let GenerateTokenFileIn = document.createElement('div')
+                GenerateTokenFileIn.innerHTML = '<div class="button-wrapper--1UkG6" data-type="primary" style="margin-left: 5px;"margin-right:5px;">Token</div>'
+                GenerateTokenFileIn.onclick = function () {
+                    let tokenInfo = "id:" +  JSON.parse(localStorage.getItem('token')).default_drive_id;
+                    tokenInfo += "\ntoken:" +  accesstoken;
+                    tokenInfo += "\nrefresh_token:" + JSON.parse(localStorage.getItem('token')).refresh_token;
+                    alert(tokenInfo);
                 }
                 document.querySelector('[class|=header]').children[1].append(GenerateShareBtn)
                 document.querySelector('[class|=header]').children[1].append(GenerateFileOut)
                 document.querySelector('[class|=header]').children[1].append(GenerateFileIn)
+                document.querySelector('[class|=header]').children[1].append(GenerateTokenFileIn)
             }
 
         }

@@ -10,3 +10,5 @@ QQ群：1055506433
 alyunpan.user.js 阿里云盘脚本
 
 CompatibleDesktopMode.user.js 移动端兼容桌面端脚本
+
+alyunpan.login.user.js 阿里云盘影音宝X登录脚本

@@ -1,10 +1,9 @@
 // ==UserScript==
-// @name         阿里云盘脚本V5.9【兼容阿里新版本】
+// @name         阿里云盘脚本V6.1【修改提示文本信息】
 // @namespace    http://bbs.tampermonkey.net.cn/
-// @version      66.90
+// @version      66.92
 // @description  【bbs.tampermonkey.net.cn】李恒道
 // @author       【bbs.tampermonkey.net.cn】李恒道
-// @source       https://script.tampermonkey.net.cn/57.user.js
 // @match        https://passport.aliyundrive.com/*
 // @match        https://www.aliyundrive.com/drive/*
 // @match        https://www.aliyundrive.com/drive
@@ -15,6 +14,10 @@
 // @match        http://www.aliyundrive.com/drive
 // @match        http://aliyundrive.com/drive/*
 // @match        http://aliyundrive.com/drive
+// @match        https://www.aliyundrive.com/drive?spm=*
+// @match        https://aliyundrive.com/drive?spm=*
+// @match        http://www.aliyundrive.com/drive?spm=*
+// @match        http://aliyundrive.com/drive?spm=*
 // @icon         https://www.google.com/s2/favicons?domain=aliyundrive.com
 // @require      https://cdn.bootcdn.net/ajax/libs/lodash.js/4.17.21/lodash.js
 // @require      https://cdn.bootcdn.net/ajax/libs/js-sha1/0.6.0/sha1.js
@@ -43,7 +46,7 @@ let Sublistnum = 0;
 var ShowFileObj = {
     name: '文件获取失败',
     content_hash: 'hash获取失败',
-    size: '公众号:叛逆青年旅舍，来自油猴中文网:bbs.tampermonkey.net.cn',
+    size: '公众号:一之哥哥，来自油猴中文网:bbs.tampermonkey.net.cn',
     content_type: 'Fucccccck',
     file_id: '天才少年李恒道',
     content_type: '系统李恒道吹牛逼理论，QQ4548212'
@@ -236,7 +239,7 @@ function MulReadialogCreate() {
     GenerateFileInShow = true
     GenerateFileinDialogShow = document.createElement('div')
     unsafeWindow.ReadFileList = ReadFileList
-    GenerateFileinDialogShow.innerHTML = `<div class="ant-modal-content" style=" width: 500px;z-index: 99;position: absolute;top: 50px;left: calc(50% - 250px);"><div class="ant-modal-header"><input id="uploadfile" onchange="ReadFileList(this)" type="file"  style="display: none;"><div class="ant-modal-title" id="rcDialogTitle0"><div class="icon-wrapper--3dbbo" style="display: flex;align-items: center;justify-content: space-between;"><span>文件批量导入(请勿导入时关闭)</span>    <span data-role="icon" data-render-as="svg" data-icon-type="PDSClose" class="close-icon--33bP0 icon--d-ejA " style="    cursor: pointer;"><svg viewBox="0 0 1024 1024"><use xlink:href="#PDSClose"></use></svg></span></div></div></div><div class="ant-modal-body"><div class=""><div class="cover-wrapper--2UqQb" style="background: var(--background_secondary_blur);flex-direction: column;height: 100px;display: flex;justify-content: center;align-items: center;" data-spm-anchor-id="0.0.0.i6.54a06c75eRjwhJ"><div>多文件批量导出 公众号:<span style="    color: blue;">叛逆青年旅舍</span></div><div>作者<span style="    color: blue;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">天才少年李恒道</span>QQ<span style="    color: blue;">4548212<!--        span--></span></div><div>油猴中文网<span style="    color: red;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">bbs.tampermonkey.net.cn</span><span style="    color: blue;"><!--        span--></span></div><div></div></div><div class="FileListOutShow            " style="    height: calc(100% - 150px);    overflow-y: scroll;    padding: 5px 20px;    max-height: 300px;" data-spm-anchor-id="0.0.0.i7.54a06c75uw7F5E"></div><div style="display: flex;flex-direction: row-reverse;margin-top: 10px;align-items: center;"><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">开始提取</div><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">导入文件</div>                                                                                                                                                   <div class="SelectNumShow">当前已选:<span>0</span>项</div></div>                                                                                                                                                   </div></div></div>`
+    GenerateFileinDialogShow.innerHTML = `<div class="ant-modal-content" style=" width: 500px;z-index: 99;position: absolute;top: 50px;left: calc(50% - 250px);"><div class="ant-modal-header"><input id="uploadfile" onchange="ReadFileList(this)" type="file"  style="display: none;"><div class="ant-modal-title" id="rcDialogTitle0"><div class="icon-wrapper--3dbbo" style="display: flex;align-items: center;justify-content: space-between;"><span>文件批量导入(请勿导入时关闭)</span>    <span data-role="icon" data-render-as="svg" data-icon-type="PDSClose" class="close-icon--33bP0 icon--d-ejA " style="    cursor: pointer;"><svg viewBox="0 0 1024 1024"><use xlink:href="#PDSClose"></use></svg></span></div></div></div><div class="ant-modal-body"><div class=""><div class="cover-wrapper--2UqQb" style="background: var(--background_secondary_blur);flex-direction: column;height: 100px;display: flex;justify-content: center;align-items: center;" data-spm-anchor-id="0.0.0.i6.54a06c75eRjwhJ"><div>多文件批量导出 公众号:<span style="    color: blue;">一之哥哥</span></div><div>作者<span style="    color: blue;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">天才少年李恒道</span>QQ<span style="    color: blue;">4548212<!--        span--></span></div><div>油猴中文网<span style="    color: red;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">bbs.tampermonkey.net.cn</span><span style="    color: blue;"><!--        span--></span></div><div></div></div><div class="FileListOutShow            " style="    height: calc(100% - 150px);    overflow-y: scroll;    padding: 5px 20px;    max-height: 300px;" data-spm-anchor-id="0.0.0.i7.54a06c75uw7F5E"></div><div style="display: flex;flex-direction: row-reverse;margin-top: 10px;align-items: center;"><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">开始提取</div><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">导入文件</div>                                                                                                                                                   <div class="SelectNumShow">当前已选:<span>0</span>项</div></div>                                                                                                                                                   </div></div></div>`
     GenerateFileinDialogShow.onclick = function (event) {
         //多选关闭删除
         if (event.target.outerHTML.indexOf('#PDSClose') != -1) {
@@ -275,7 +278,7 @@ function MulFileDialogCreate() {
     }
     GenerateShow = true
     GenerateDialogShow = document.createElement('div')
-    GenerateDialogShow.innerHTML = `<div class="ant-modal-content" style=" width: 500px;z-index: 99;position: absolute;top: 50px;left: calc(50% - 250px);"><div class="ant-modal-header"><div class="ant-modal-title" id="rcDialogTitle0"><div class="icon-wrapper--3dbbo" style="display: flex;align-items: center;justify-content: space-between;"><span>文件批量导出</span>    <span data-role="icon" data-render-as="svg" data-icon-type="PDSClose" class="close-icon--33bP0 icon--d-ejA " style="    cursor: pointer;"><svg viewBox="0 0 1024 1024"><use xlink:href="#PDSClose"></use></svg></span></div></div></div><div class="ant-modal-body"><div class=""><div class="cover-wrapper--2UqQb" style="background: var(--background_secondary_blur);flex-direction: column;height: 100px;display: flex;justify-content: center;align-items: center;" data-spm-anchor-id="0.0.0.i6.54a06c75eRjwhJ"><div>多文件批量导出 公众号:<span style="    color: blue;">叛逆青年旅舍</span></div><div>作者<span style="    color: blue;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">天才少年李恒道</span>QQ<span style="    color: blue;">4548212<!--        span--></span></div><div>油猴中文网<span style="    color: red;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">bbs.tampermonkey.net.cn</span><span style="    color: blue;"><!--        span--></span></div><div></div></div><div style="background: var(--background_secondary_blur);display: flex;align-items: center;padding: 0px 50px;justify-content: space-evenly;padding-bottom: 10px;"><div>搜索文件</div><input type="text" name="SearchMulFile" data-spm-anchor-id="0.0.0.i1.35676c753HbmyV" value=""><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">搜索</div>                                                                                                                                                   </div><div class="FileListOutShow            " style="    height: calc(100% - 150px);    overflow-y: scroll;    padding: 5px 20px;    max-height: 300px;" data-spm-anchor-id="0.0.0.i7.54a06c75uw7F5E">    </div><div style="display: flex;flex-direction: row-reverse;margin-top: 10px;align-items: center;"><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">保存至网盘</div><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">导出</div><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">全部选择</div>                                                                                                                                                   <div class="SelectNumShow">当前共:<span>330</span>项</div></div>                                                                                                                                                   </div></div></div>`
+    GenerateDialogShow.innerHTML = `<div class="ant-modal-content" style=" width: 500px;z-index: 99;position: absolute;top: 50px;left: calc(50% - 250px);"><div class="ant-modal-header"><div class="ant-modal-title" id="rcDialogTitle0"><div class="icon-wrapper--3dbbo" style="display: flex;align-items: center;justify-content: space-between;"><span>文件批量导出</span>    <span data-role="icon" data-render-as="svg" data-icon-type="PDSClose" class="close-icon--33bP0 icon--d-ejA " style="    cursor: pointer;"><svg viewBox="0 0 1024 1024"><use xlink:href="#PDSClose"></use></svg></span></div></div></div><div class="ant-modal-body"><div class=""><div class="cover-wrapper--2UqQb" style="background: var(--background_secondary_blur);flex-direction: column;height: 100px;display: flex;justify-content: center;align-items: center;" data-spm-anchor-id="0.0.0.i6.54a06c75eRjwhJ"><div>多文件批量导出 公众号:<span style="    color: blue;">一之哥哥</span></div><div>作者<span style="    color: blue;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">天才少年李恒道</span>QQ<span style="    color: blue;">4548212<!--        span--></span></div><div>油猴中文网<span style="    color: red;" data-spm-anchor-id="0.0.0.i7.54a06c75eRjwhJ">bbs.tampermonkey.net.cn</span><span style="    color: blue;"><!--        span--></span></div><div></div></div><div style="background: var(--background_secondary_blur);display: flex;align-items: center;padding: 0px 50px;justify-content: space-evenly;padding-bottom: 10px;"><div>搜索文件</div><input type="text" name="SearchMulFile" data-spm-anchor-id="0.0.0.i1.35676c753HbmyV" value=""><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">搜索</div>                                                                                                                                                   </div><div class="FileListOutShow            " style="    height: calc(100% - 150px);    overflow-y: scroll;    padding: 5px 20px;    max-height: 300px;" data-spm-anchor-id="0.0.0.i7.54a06c75uw7F5E">    </div><div style="display: flex;flex-direction: row-reverse;margin-top: 10px;align-items: center;"><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">保存至网盘</div><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">导出</div><div class="button-wrapper--1UkG6" data-type="primary" data-spm-anchor-id="0.0.0.i3.35676c7515rlzj" style="margin-left: 5px;margin-right: 5px;height: 32px;">全部选择</div>                                                                                                                                                   <div class="SelectNumShow">当前共:<span>330</span>项</div></div>                                                                                                                                                   </div></div></div>`
     GenerateDialogShow.onclick = function (event) {
         debugger;
         console.log('去他妈的导出', event.target)
@@ -297,13 +300,13 @@ function MulFileDialogCreate() {
             return;
         }
         if (event.target.innerText == '保存至网盘') {
-            let outtext = '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:叛逆青年旅舍\n油猴中文网:bbs.tampermonkey.net.cn\n'
+            let outtext = '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:一之哥哥\n油猴中文网:bbs.tampermonkey.net.cn\n'
             document.querySelectorAll('.FileListOutShow >div').forEach(item => {
                 if (item.checkbox == true) {
                     outtext = outtext + item.name + '\n' + item.date + '\n'
                 }
             })
-            if (outtext !== '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:叛逆青年旅舍\n油猴中文网:bbs.tampermonkey.net.cn\n') {
+            if (outtext !== '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:一之哥哥\n油猴中文网:bbs.tampermonkey.net.cn\n') {
                 alert('开始进行上传，请勿重复点击！')
                 UploadTextToAliYunpan(outtext)
             }
@@ -316,13 +319,13 @@ function MulFileDialogCreate() {
         }
 
         if (event.target.innerText == '导出') {
-            let outtext = '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:叛逆青年旅舍\n油猴中文网:bbs.tampermonkey.net.cn\n'
+            let outtext = '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:一之哥哥\n油猴中文网:bbs.tampermonkey.net.cn\n'
             document.querySelectorAll('.FileListOutShow >div').forEach(item => {
                 if (item.checkbox == true) {
                     outtext = outtext + item.name + '\n' + item.date + '\n'
                 }
             })
-            if (outtext !== '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:叛逆青年旅舍\n油猴中文网:bbs.tampermonkey.net.cn\n') {
+            if (outtext !== '阿里云油猴插件By:油猴中文版\n作者:天才少年李恒道QQ:4548212\n公众号:一之哥哥\n油猴中文网:bbs.tampermonkey.net.cn\n') {
                 download('导出文件成功By:油猴中文网.txt', outtext)
             }
             else {
@@ -588,7 +591,7 @@ function CreateShareClip(tempobj) {
     ShowFileObj.content_type = tempobj.content_type;
     ShowFileObj.file_id = tempobj.file_id;
     let ret = confirm('文件名:' + ShowFileObj.name + '\n校验值:' + ShowFileObj.content_hash + '\n文件大小:' + ShowFileObj.size + '\n' +
-        '点击确定自动添加分享码到剪辑版\n来自油猴中文网bbs.tampermonkey.net.cn\n公众号:叛逆青年旅舍');
+        '点击确定自动添加分享码到剪辑版\n来自油猴中文网bbs.tampermonkey.net.cn\n公众号:一之哥哥');
     if (ret == true) {
         try {
 
@@ -664,23 +667,16 @@ function StartListner() {
 
                 }
                 let GenerateFileIn = document.createElement('div')
+
                 GenerateFileIn.innerHTML = '<div class="button-wrapper--1UkG6" data-type="primary" style="margin-left: 5px;"margin-right:5px;">多文件提取</div>'
                 GenerateFileIn.onclick = function () {
                     MulReadialogCreate()
 
-                }
-                let GenerateTokenFileIn = document.createElement('div')
-                GenerateTokenFileIn.innerHTML = '<div class="button-wrapper--1UkG6" data-type="primary" style="margin-left: 5px;"margin-right:5px;">Token</div>'
-                GenerateTokenFileIn.onclick = function () {
-                    let tokenInfo = "id:" +  JSON.parse(localStorage.getItem('token')).default_drive_id;
-                    tokenInfo += "\ntoken:" +  accesstoken;
-                    tokenInfo += "\nrefresh_token:" + JSON.parse(localStorage.getItem('token')).refresh_token;
-                    alert(tokenInfo);
+
                 }
                 document.querySelector('[class|=header]').children[1].append(GenerateShareBtn)
                 document.querySelector('[class|=header]').children[1].append(GenerateFileOut)
                 document.querySelector('[class|=header]').children[1].append(GenerateFileIn)
-                document.querySelector('[class|=header]').children[1].append(GenerateTokenFileIn)
             }
 
         }
@@ -923,6 +919,9 @@ if (unsafeWindow.location.href.indexOf('passport.aliyundrive.com/mini_login.htm'
 
     return;
 }
+
+
+
 
 
 
